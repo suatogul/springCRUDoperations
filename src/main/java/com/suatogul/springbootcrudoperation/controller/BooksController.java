@@ -12,22 +12,22 @@ public class BooksController {
 @Autowired
     BooksService booksService;
 
-    @GetMapping("/book")
+    @GetMapping("/books")
     private List<Books> getAllBooks(){
        return booksService.getAllBooks();
     }
-    @GetMapping("/books/{bookId}")
-    private Books getBooks(@PathVariable("bookId") int bookId){
-        return booksService.getBooksById(bookId);
+    @GetMapping("/book/{bookid}")
+    private Books getBooks(@PathVariable("bookid") int bookid){
+        return booksService.getBooksById(bookid);
     }
     @DeleteMapping("/book/{bookId}")
-    private void deleteBook(@PathVariable("bookId") int bookId){
-        booksService.delete(bookId);
+    private void deleteBook(@PathVariable("bookid") int bookid){
+        booksService.delete(bookid);
     }
     @PostMapping("/books")
     private int saveBook(@RequestBody Books books){
         booksService.saveOrUpdate(books);
-        return books.getBookId();
+        return books.getBookid();
     }
     @PutMapping("/books")
     private Books update(@RequestBody Books books){

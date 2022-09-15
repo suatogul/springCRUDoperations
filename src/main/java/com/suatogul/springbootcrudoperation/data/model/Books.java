@@ -11,28 +11,29 @@ import javax.persistence.Table;
 public class Books {
     @Id
     @Column
-    private int bookId;
+    private int bookid;
     @Column
-    private String bookName;
+    private String bookname;
     @Column
     private String author;
     @Column
     private int price;
 
-    public int getBookId() {
-        return bookId;
+
+    public int getBookid() {
+        return bookid;
     }
 
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
+    public void setBookid(int bookid) {
+        this.bookid = bookid;
     }
 
-    public String getBookName() {
-        return bookName;
+    public String getBookname() {
+        return bookname;
     }
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
+    public void setBookname(String bookname) {
+        this.bookname = bookname;
     }
 
     public String getAuthor() {
